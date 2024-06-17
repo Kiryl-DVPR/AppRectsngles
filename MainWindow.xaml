@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="grid1">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition/>
+            
+        </Grid.ColumnDefinitions>
+        <Polygon x:Name="Rect1" Grid.Column="1" Stroke="Black"></Polygon>
+        <Polygon x:Name="Rect2" Grid.Column="1" Stroke="Black"></Polygon>
+        <Polygon x:Name="Rect3" Grid.Column="1" Stroke="Black"></Polygon>
+        <Polygon x:Name="Rect4" Grid.Column="1" Stroke="Black"></Polygon>
+        <Polygon x:Name="Rect5" Grid.Column="1" Stroke="Black"></Polygon>
+        <Polyline x:Name="Polyl" StrokeThickness="4" Grid.Column="1" Stroke="HotPink" Points="100, 100, 400, 100, 400, 300, 100,300,100,100"></Polyline>
+
+        <StackPanel Grid.Column="0">
+            <Button Click="VButton1"  Height="30" Margin="10">Вариант 1 (Генер. главн.прям.)</Button>
+            <Button   Click="VButton2" Height="30" Margin="10">Вариант 2 (Генер. главн.прям.)</Button>
+            <Button   Click="VButton3" Height="30" Margin="10">Вариант 3 (Генер. главн.прям.)</Button>
+            <CheckBox x:Name="checkBox1"  IsChecked="False" Height="20" Width="146" Checked="CheckBox_Checked" Unchecked="checkBox_Unchecked"/>
+            <CheckBox x:Name="checkBox2"  IsChecked="False" Height="20" Width="146" Checked="CheckBox_Checked" Unchecked="checkBox_Unchecked"/>
+            <CheckBox x:Name="checkBox3"  IsChecked="False" Height="20" Width="146" Checked="CheckBox_Checked" Unchecked="checkBox_Unchecked"/>
+            
+            <Button Click="Generation" Height="30" Margin="10" FontSize="10">Генерация втор. прямоугольников</Button>
+        </StackPanel>
+    </Grid>
+</Window>
